@@ -1,0 +1,100 @@
+@import 'config';
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.main{
+    display: grid;
+}
+
+.hero{
+    position: relative;
+    grid-row: 1/3;
+    grid-column: 1/2;
+
+    nav{
+        
+
+        position: absolute;
+        width: 100%;
+        min-height: 15vh;
+        display: flex;
+        align-items: center;
+        padding: 5vw;
+
+        .toggler{
+            position: absolute;
+            .hamburger{
+                display: block;
+            }
+            .close{
+                display: none;
+            }
+        }
+        .logo{
+            margin: 0 auto;
+        }
+        .nav-list{
+
+            display: flex;
+            display: none;
+            list-style: none;
+            gap: 2vw;
+
+            
+        }
+
+    }
+}
+.carousel-arrows{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    z-index: 2;
+
+    display: grid;
+    justify-items: end;
+    align-items: end;
+
+    .buttons{
+        display: flex;
+
+        button{
+            aspect-ratio: 1/1;
+            padding: .9em;
+            border: none;
+            background-color: $black;
+        }
+    }
+    
+
+}
+
+.discover{
+    padding: 5em 0;
+
+    .title{
+        margin-bottom: .8em;
+    }
+    p{
+        margin-bottom: 3.5em;
+    }
+    a{
+        text-decoration: none;
+        color: $black;
+        letter-spacing: 0.4em;
+
+        .arrow{
+            margin-left: 1em;
+        }
+    }
+}
+
+.about-us{
+    padding: 5em 0;
+
+    .title{
+        margin-bottom: .8em;
+    }
+}

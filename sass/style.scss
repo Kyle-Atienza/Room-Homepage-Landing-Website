@@ -1,13 +1,72 @@
 @import 'config';
 
 .container{
-    width: 85%;
-    margin: 0 auto;
+    padding: 0 Max(5vw, 2.5em);
+
 }
 
 .main{
     display: grid;
-    
+    height: 100%;
+
+}
+
+nav{
+        
+
+    position: absolute;
+    width: 100%;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    padding: 0 6vw;
+    z-index: 2;
+
+    .toggler{
+        z-index: 2;
+
+        position: absolute;
+        .hamburger{
+            display: block;
+            // display: none;
+        }
+        .close{
+            display: none;
+            // display: block;
+            
+        }
+    }
+    .logo{
+        margin: 0 auto;
+    }
+    .nav-list{
+        position: absolute;
+        left: 0;
+        
+        align-items: center;
+        justify-content: flex-end;
+        display: none;
+
+        list-style: none;
+        gap: 5vw;
+        gap: 1.5em;
+        
+        // padding: 6vw;
+        width: 100%;
+        height: 100%;
+
+        background: $white;
+
+        .nav-link{
+            font-family: 'Spartan', sans-serif;
+            font-weight: 600;  
+            color: $black;
+            font-size: .8rem;
+            
+        }
+        
+    }
+
 }
 
 .hero{
@@ -15,62 +74,18 @@
     grid-row: 1/3;
     grid-column: 1/2;
 
-    nav{
+    .carousel{
+        height: Max(100%, 350px);
+        height: 60vh;
+
+        img{
+            max-width: auto;
+            // height: 100%;
+            object-fit: cover;
+        }
         
-
-        position: absolute;
-        width: 100%;
-        min-height: 15vh;
-        display: flex;
-        align-items: center;
-        padding: 6vw;
-
-        .toggler{
-            z-index: 2;
-
-            position: absolute;
-            .hamburger{
-                display: block;
-                // display: none;
-            }
-            .close{
-                display: none;
-                // display: block;
-                
-            }
-        }
-        .logo{
-            margin: 0 auto;
-        }
-        .nav-list{
-            position: absolute;
-            left: 0;
-
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            display: none;
-            list-style: none;
-            gap: 5vw;
-            gap: 1.5em;
-            
-            padding: 6vw;
-            width: 100%;
-            height: 100%;
-
-            background: $white;
-
-            .nav-link{
-                font-family: 'Spartan', sans-serif;
-                font-weight: 600;  
-                color: $black;
-                font-size: .8rem;
-                
-            }
-            
-        }
-
     }
+    
 }
 .carousel-arrows{
     grid-row: 1/3;
@@ -85,15 +100,21 @@
         display: flex;
 
         button{
+            display: flex;
+            align-items: center;
             aspect-ratio: 1/1;
-            padding: 1.5em;
+            padding: Max(1.8vw, 1.5em);
             border: none;
-            background-color: $black;
+            background: $black;
 
             transition: all .1s ease-in-out;
 
             &:hover{
                 background-color: $dark-gray;
+            }
+            img{
+                width: .8rem;
+                height: unset;
             }
         }
     }
@@ -103,6 +124,7 @@
 
 .discover{
     padding: 5em 0;
+    height: min-content;
 
     .title{
         margin-bottom: .8em;
@@ -119,6 +141,10 @@
 
         .arrow{
             margin-left: 1em;
+            
+            img{
+                width: 3rem;
+            }
         }
         &:hover{
             color: $gray;
@@ -132,5 +158,70 @@
     .title{
         margin-bottom: .8em;
     }
+}
+
+@media (min-width: 600px){
+
+    .main{
+        // height: 100vh;
+
+        grid-template-columns: 1fr 1fr min-content 1fr;
+        grid-template-rows: 60vh auto;
+        grid-template-rows: 1fr auto;
+
+
+        .hero, .carousel-arrows, .discover{
+            grid-column: unset;
+            grid-row: 1/2;
+        }
+        .hero{
+            grid-column: 1/3;
+        }
+        .carousel-arrows{
+            grid-column: 3/4;
+        }
+        .discover{
+            grid-column: 3/5;
+
+            padding: 0;
+            margin: auto 0;
+        }
+
+        .about-us{
+            grid-column: 2/4;
+
+            padding: 0;
+            margin: auto 0;
+        }
+        .image-light{
+            grid-column-start: 4;
+        }
+    }
+
+    nav{
+        align-items: center;
+        gap: 3em;
+
+        .toggler{
+            display: none;
+        }
+        .logo{
+            margin: 0;
+        }
+        .nav-list{
+            display: flex;
+            position: relative;
+            background: none;
+
+            width: auto;
+            height: auto;
+
+            .nav-link{
+                color: $white;
+            }
+        }
+
+    }
+
 }
 

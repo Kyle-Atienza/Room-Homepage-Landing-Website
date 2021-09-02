@@ -1,2 +1,5 @@
-var close = document.querySelector(".toggler>.hamburger")
-console.log(close)
+var hamburger = document.querySelector(".toggler>.hamburger")
+
+hamburger.addEventListener("click", function () {
+    console.log("hey")
+})

@@ -10,11 +10,13 @@
 body{
     font-family: 'Spartan', sans-serif;
     font-size: 16px;
+    overflow: hidden;
 }
 
 img{
-    max-width: 100%;
+    width: 100%;
     height: 100%;
+    
     object-fit: cover;
     margin: 0;
     padding: 0;
@@ -32,6 +34,7 @@ h1{
     font-family: 'Spartan', sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
+    font-size: Max(2.5vw, 1.5rem);
 }
 h2{
     font-family: 'Spartan', sans-serif;
@@ -44,6 +47,7 @@ p{
     font-family: 'Spartan', sans-serif;
     font-weight: 500;
     font-size: .8rem;
+    font-size: Max(.9vw, .8rem);
     line-height: 1.5em;
 
     color: $gray;

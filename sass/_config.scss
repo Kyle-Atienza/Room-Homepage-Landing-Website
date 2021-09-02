@@ -11,6 +11,7 @@ body{
     font-family: 'Spartan', sans-serif;
     font-size: 16px;
     overflow: hidden;
+    height: 100vh;
 }
 
 img{
@@ -39,7 +40,7 @@ h1{
 h2{
     font-family: 'Spartan', sans-serif;
     font-weight: 700;   
-    font-size: .8rem;
+    font-size: Max(1vw, .8rem);
     text-transform: uppercase;
     letter-spacing: .3em;
 }
@@ -47,7 +48,7 @@ p{
     font-family: 'Spartan', sans-serif;
     font-weight: 500;
     font-size: .8rem;
-    font-size: Max(.9vw, .8rem);
+    font-size: Max(.7vw, .8rem);
     line-height: 1.5em;
 
     color: $gray;

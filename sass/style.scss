@@ -111,9 +111,9 @@ nav{
         }
         
     }
-    .desktop{
-        display: none;
-    }
+    // .desktop{
+    //     display: none;
+    // }
     
 }
 .carousel-arrows{
@@ -216,12 +216,12 @@ nav{
                 height: Max(100%, 350px);
                 width: 100%;
             }
-            .desktop{
-                display: flex;
-            }
-            .mobile{
-                display: none;
-            }
+            // .desktop{
+            //     display: flex;
+            // }
+            // .mobile{
+            //     display: none;
+            // }
         }
         .carousel-arrows{
             grid-column: 3/4;
